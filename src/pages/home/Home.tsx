@@ -1,14 +1,17 @@
-import React from "react";
 import "./Home.css";
-import homeLogo from "../../assets/20944201.jpg";
 
-const Home = () => {
+interface minhaProps {
+  title: string;
+  description: string;
+}
+
+function Home(props: minhaProps) {
   return (
     <>
-      <h1 className="titulo">Home</h1>;
-      <img src={homeLogo} className="img" alt="login" />
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
     </>
   );
-};
+}
 
 export default Home;
